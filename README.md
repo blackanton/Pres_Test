@@ -1,3 +1,5 @@
+Note: The main emulator the app was tested with is Nexus 5 API 28 (Android 9, API28)
+
 A. Problems
    Problem 1: Calling the endpoint URL    "https://api.flickr.com/services/rest/api_key=949e98778755d1982f537d56236bbb42&method=flickr.photos.search" directly would raise no parameter exeception error as documented in the flickr API. 
    Problem 2: The photos from end point "https://api.flickr.com/services/rest/api_key=949e98778755d1982f537d56236bbb42&method=flickr.photos.search" are in a number of hundreds of thousands. Download all these photo at once would be impractical. 
@@ -28,7 +30,8 @@ D. Tradeoff
 E. Leftout/Potential extention
    1. As for now the recyler view display the title, dimension and size together with the image(bitmap) in the list. A better way of displaying the entire thing would be using a master-detailed layout. All images are listed in one fragment and have another fragment displaying the detailed image and other data (size, dimension, title) of the chosen image.
    2. Another leftout is to coming up with a better solution in reaching parallelism. One possible improvement is dividing the threads of downloading photo bitmap into different groups so that one group of threads will be executed after another group.
- 
+   3. The app should be worked around so that it will support running on old Android devices as well as tablet.
+
 
 
 
